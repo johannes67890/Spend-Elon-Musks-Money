@@ -16,14 +16,14 @@ body /*default body setup*/
     width: 250px; 
     height: 250px;
 }
-h1
+h1 /*Title*/
 {
     height: 50px;
     background-color: white;
     font-family: Georgia;
     text-align: center;
 }
-#balance /**/
+#balance /*balance setup with grid between text and balance*/
 {
     display: grid;
     align-content: center;
