@@ -25,9 +25,13 @@
                 <div class="item_text">Coffe</div>
                 <div class="item_price">5$</div>
                 <div class="action">
-                    <button class="sell">Sell</button>
+                    <button onclick="sell_buy('sell',5)" class="sell">Sell</button>
                     <input type="number">
-                    <button class="buy">Buy</button>
+                    <button onclick="sell_buy('buy',5)" class="buy">Buy</button>
+                </div>
+            
+                <div class="popup" onclick="balance_error()"> click me
+                    <span class="popuptext" id="popup_error">Popup text...</span>
                 </div>
             </div>
     </div>

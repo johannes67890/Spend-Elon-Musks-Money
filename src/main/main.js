@@ -11,3 +11,13 @@ function sell_buy(opr, val)
     amount = new_amount.toLocaleString("ja-JP"); /* add back comma on 'amount' */
     document.getElementById("money").innerHTML =  "$" + amount; /* print to screen */
 }
+
+function balance_error()
+{
+    while (Number(amount.replace(/,/g, '')) > 100000000000)
+    {
+        console.log(amount);
+        var popup = document.getElementById("popup_error");
+        popup.classList.toggle("show");
+    }
+ }
