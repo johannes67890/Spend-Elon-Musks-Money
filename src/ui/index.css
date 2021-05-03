@@ -51,6 +51,7 @@ h1 /*Title*/
 }
 .item_price /*item price*/
 {
+    font-size: 125%;
     color: rgb(30, 115, 30);
 }
 .item_img /*img placement*/
