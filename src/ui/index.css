@@ -127,6 +127,11 @@ input::-webkit-inner-spin-button, input::-webkit-outer-spin-button /* Remove arr
     -webkit-animation: fadeIn 1s;
     animation: fadeIn 1s
   }
+  .popup .hidden {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s 2s, opacity 2s linear;
+  }
   
   /* Add animation (fade in the popup) */
   @-webkit-keyframes fadeIn {
@@ -138,3 +143,4 @@ input::-webkit-inner-spin-button, input::-webkit-outer-spin-button /* Remove arr
     from {opacity: 0;}
     to {opacity:1 ;}
   }
+ 
