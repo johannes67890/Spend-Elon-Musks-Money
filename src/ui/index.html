@@ -5,33 +5,31 @@
     <script src="../main/main.js"></script>
     <title>Hjemmeside</title>
 </head>
-<body id="warning" onload="balance()">
-    <img src="../img/musk.jpg" alt="?" id="profile">
+<body onload="balance()">
+    <img src="../img/Elonmusk.jpg" alt="?" id="profile">
     <h1>Spend Elon Musks money</h1>
     <h2 id="balance">Balance Avaliable <span style=color:green id="money"></span></h2>
     <div class="container">
-            <div class="item" id="1"> <!--coke-->
+            <div class="item" onload="item_count()"> <!--coke-->
                 <img class= "item_img" src="../img/coke.png" alt="?">
                 <div class="item_text">Coke</div>
                 <div class="item_price" id="1">3$</div>
                 <div class="action">
                     <button onclick="balance_error(),sell_buy('sell',3)" class="sell">Sell</button>
-                    <input type="number" value='0' id="1">
+                    <input type="text" id='1'>
                     <button onclick="sell_buy('buy',3)" class="buy">Buy</button>
                 </div>
             </div>
-            <div class="item" id="2"> <!--coffe-->
+            <div class="item" onload="item_count()"> <!--coffee-->
                 <img class= "item_img" src="../img/coffee.png" alt="?">
-                <div class="item_text">Coffe</div>
+                <div class="item_text">Coffee</div>
                 <div class="item_price">5$</div>
                 <div class="action">
                     <button onclick="balance_error(), sell_buy('sell',5)" class="sell">Sell</button>
-                    <input type="number" value='0' id="2">
+                    <input type="text" id='2'>
                     <button onclick="sell_buy('buy',5)" class="buy">Buy</button>
                 </div>
             </div>
     </div>
-    <script>   
-    </script>
 </body>
 </html>
