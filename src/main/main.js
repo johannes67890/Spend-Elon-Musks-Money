@@ -14,25 +14,16 @@ function sell_buy(opr, val)
 
 function balance_error()
 {
-    if (Number(amount.replace(/,/g, '')) > 100000000000)
+    if (Number(amount.replace(/,/g, '')) >= 100000000000)
     {
         console.log(amount);
-        var warning = document.getElementById("warning");
-        warning.classList.toggle("warningShow");
-        console.log("test1");
-        for (var i = 0; i < 5; i++)
-        {
-            console.log("test2");
-            setTimeout(() => {
-                warning.classList.toggle("warningHide");
-            }, 1000);
-        }
-
-
         var popup = document.getElementById("popup_error");
         popup.classList.toggle("show");
         setTimeout(() => {
             popup.classList.toggle("hidden");
+            setTimeout(() => {
+                location.reload();
+            }, 2000);
         }, 2000);
     }
  }
