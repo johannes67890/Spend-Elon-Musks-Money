@@ -17,13 +17,9 @@ function balance_error()
     if (Number(amount.replace(/,/g, '')) >= 100000000000)
     {
         console.log(amount);
-        var popup = document.getElementById("popup_error");
-        popup.classList.toggle("show");
-        setTimeout(() => {
-            popup.classList.toggle("hidden");
+        alert("You are over the balance limit! The page wil reload in a moment!")
             setTimeout(() => {
                 location.reload();
             }, 2000);
-        }, 2000);
     }
  }
