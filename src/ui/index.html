@@ -5,12 +5,12 @@
     <script src="../main/main.js"></script>
     <title>Hjemmeside</title>
 </head>
-<body onload="balance()">
+<body onload="balance(); generateLayout()">
     <img src="../img/Elonmusk.jpg" alt="?" id="profile">
     <h1>Spend Elon Musks money</h1>
     <h2 id="balance">Balance Avaliable <span style=color:green id="money"></span></h2>
-    <div class="container">
-            <div class="item" onload="item_count()"> <!--coke-->
+    <div id="containerid" class="container">
+            <div class="item"> <!--coke-->
                 <img class= "item_img" src="../img/coke.png" alt="?">
                 <div class="item_text">Coke</div>
                 <div class="item_price">3$</div>
@@ -20,7 +20,7 @@
                     <button onclick="sell_buy('buy',3, 1)" class="buy">Buy</button>
                 </div>
             </div>
-            <div class="item" onload="item_count()"> <!--coffee-->
+            <div class="item"> <!--coffee-->
                 <img class= "item_img" src="../img/coffee.png" alt="?">
                 <div class="item_text">Coffee</div>
                 <div class="item_price">5$</div>
