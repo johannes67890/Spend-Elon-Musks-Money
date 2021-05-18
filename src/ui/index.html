@@ -2,34 +2,15 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="./index.css">
-    <script src="../main/main.js"></script>
+    <script type="module" src="../main/main.js"></script>
     <title>Hjemmeside</title>
 </head>
-<body onload="balance()">
-    
+<body>
+    <img src="../img/Elonmusk.jpg" alt="?" id="profile">
     <h1>Spend Elon Musks money</h1>
-    <h2 id="balance">Balance Avaliable <span style=color:green id="money"></span></h2>
-    <div class="container">
-            <div class="item" id="1"> <!--coke-->
-                <img src="../img/coke.png" alt="?">
-                <div class="item_text">Coke</div>
-                <div class="item_price">3$</div>
-                <div class="action" id="1">
-                    <button class="sell">Sell</button>
-                    <input type="number">
-                    <button class="buy">Buy</button>
-                </div>
-            </div>
-            <div class="item" id="2"> <!--coffe-->
-                <img src="../img/coffee.png" alt="?">
-                <div class="item_text">Coffe</div>
-                <div class="item_price">5$</div>
-                <div class="action" id="2">
-                    <button class="sell">Sell</button>
-                    <input type="number">
-                    <button class="buy">Buy</button>
-                </div>
-            </div>
+    <h2 id="balance">Balance Avaliable <span style=color:darkgreen id="money"></span></h2>
+    <div id="containerid" class="container">
+        
     </div>
 </body>
 </html>

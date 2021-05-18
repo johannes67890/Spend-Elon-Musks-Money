@@ -1,4 +1,4 @@
-body
+body /*default body setup*/
 {
     background-color:white;
     height: 100vh;
@@ -6,19 +6,33 @@ body
     margin: 0;
     padding: 0;
 }
-h1
+#profile /*main avatar img on front page*/
+{
+    display: block;
+    margin-left: auto; /*center img vertivaly*/
+    margin-right: auto; /*center img horizontal*/
+    border-radius: 50%; /*cirkle around img effect*/
+    /*vv img size vv*/
+    width: 350px; 
+    height: 250px;
+}
+h1 /*Title*/
 {
     height: 50px;
     background-color: white;
     font-family: Georgia;
     text-align: center;
 }
-#balance /**/
+#balance /*balance setup with grid between text and balance*/
 {
     display: grid;
     align-content: center;
-    word-spacing: -2px;
+    word-spacing: -1px;
     text-align: center;
+    height: 7.5%;
+    position: sticky;
+    top: 0.25rem;
+    background: radial-gradient(farthest-corner at 50%, rgb(0, 253, 0), rgb(17, 204, 33), rgb(27, 146, 37));
 }
 .container /*grid setup*/
 {
@@ -41,9 +55,10 @@ h1
 }
 .item_price /*item price*/
 {
+    font-size: 125%;
     color: rgb(30, 115, 30);
 }
-img /*img placement*/
+.item_img /*img placement*/
 {
     display: block;
     margin-left: auto; /*center img vertivaly*/
@@ -55,7 +70,7 @@ img /*img placement*/
 .action /*action grid*/
 {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0px, 1fr));
+    grid-template-columns: repeat(3, minmax(10px, 1fr));
     gap: 10px;
     
 }
