@@ -15,5 +15,3 @@ let musk_itemlist =
         price: 10,
         imgDir: "../img/pizza.png",
     }]
-
-export {musk_itemlist};
