@@ -9,7 +9,7 @@ function sell_buy(opr, val, input_id)
 {
     //change balance amount
     var x = (opr == 'sell') ? +val : -val; /* conditional */
-    new_amount = Number(amount.replace(/,/g, '')) + x; /*change 'var_amount' to number and plus with paramater*/
+    var new_amount = Number(amount.replace(/,/g, '')) + x; /*change 'var_amount' to number and plus with paramater*/
     amount = new_amount.toLocaleString("ja-JP"); /* add back comma on 'amount' */
     document.getElementById("money").innerHTML =  "$" + amount; /* print to screen */
     //change input amount
@@ -33,22 +33,22 @@ function balance_error()
 }
 
 let itemlist = 
-    [
-    {
-        name: "Coke",
-        price: 3,
-        imgDir: "../img/coke.png",
-    },
-    {
-        name: "Coffee",
-        price: 5,
-        imgDir: "../img/coffee.png",
-    },
-    {
-        name: "Pizza",
-        price: 10,
-        imgDir: "../img/pizza.png",
-    }]
+[
+{
+    name: "Coke",
+    price: 3,
+    imgDir: "../img/coke.png",
+},
+{
+    name: "Coffee",
+    price: 5,
+    imgDir: "../img/coffee.png",
+},
+{
+    name: "Pizza",
+    price: 10,
+    imgDir: "../img/pizza.png",
+}]
 
 function generateLayout()
 {
@@ -103,3 +103,5 @@ function layout(inputid, name,price,imgDir)
     btnBuy.innerHTML = "Buy";
     action.appendChild(btnBuy);
 }
+balance(), 
+generateLayout();
