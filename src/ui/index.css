@@ -27,8 +27,12 @@ h1 /*Title*/
 {
     display: grid;
     align-content: center;
-    word-spacing: -2px;
+    word-spacing: -1px;
     text-align: center;
+    height: 7.5%;
+    position: sticky;
+    top: 0.25rem;
+    background: radial-gradient(farthest-corner at 50%, rgb(0, 253, 0), rgb(17, 204, 33), rgb(27, 146, 37));
 }
 .container /*grid setup*/
 {

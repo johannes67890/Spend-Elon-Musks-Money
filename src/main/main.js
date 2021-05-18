@@ -1,4 +1,5 @@
-amount = (100000000000).toLocaleString("ja-JP"); /*amount balance avaliable. toLocaleString("ja-JP") for the comma*/ 
+
+amount = (150000000000).toLocaleString("ja-JP"); /*amount balance avaliable. toLocaleString("ja-JP") for the comma*/ 
 
 function balance()
 {
@@ -22,7 +23,7 @@ function sell_buy(opr, val, input_id)
 
 function balance_error()
 {
-    if (Number(amount.replace(/,/g, '')) >= 100000000000)
+    if (Number(amount.replace(/,/g, '')) >= 150000000000)
     {
         console.log(amount);
         alert("You are over the balance limit! The page wil reload in a moment!")
@@ -32,28 +33,12 @@ function balance_error()
     }
 }
 
-let itemlist = 
-[
-{
-    name: "Coke",
-    price: 3,
-    imgDir: "../img/coke.png",
-},
-{
-    name: "Coffee",
-    price: 5,
-    imgDir: "../img/coffee.png",
-},
-{
-    name: "Pizza",
-    price: 10,
-    imgDir: "../img/pizza.png",
-}]
 
 function generateLayout()
 {
+    import musk_itemlist from '../src/main/list.js';
     console.log("layout generated");
-    itemlist.map((item, index) => {
+    musk_itemlist.map((item, index) => {
         layout(index, item.name, item.price, item.imgDir);
     })
 }
