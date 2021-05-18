@@ -1,5 +1,4 @@
-
-amount = (150000000000).toLocaleString("ja-JP"); /*amount balance avaliable. toLocaleString("ja-JP") for the comma*/ 
+var amount = (150000000000).toLocaleString("ja-JP"); /*amount balance avaliable. toLocaleString("ja-JP") for the comma*/ 
 
 function balance()
 {
@@ -33,12 +32,28 @@ function balance_error()
     }
 }
 
+let itemlist = 
+    [
+    {
+        name: "Coke",
+        price: 3,
+        imgDir: "../img/coke.png",
+    },
+    {
+        name: "Coffee",
+        price: 5,
+        imgDir: "../img/coffee.png",
+    },
+    {
+        name: "Pizza",
+        price: 10,
+        imgDir: "../img/pizza.png",
+    }]
 
 function generateLayout()
 {
-    import musk_itemlist from '../src/main/list.js';
     console.log("layout generated");
-    musk_itemlist.map((item, index) => {
+    itemlist.map((item, index) => {
         layout(index, item.name, item.price, item.imgDir);
     })
 }
