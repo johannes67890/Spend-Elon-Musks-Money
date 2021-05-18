@@ -32,7 +32,9 @@ function balance_error()
     }
 }
 
+
 let itemlist = [{
+    parentid: "containerid",
     name: "pizza",
     price: 10,
     imgDir: "../img/pizza.png",
@@ -42,24 +44,46 @@ function generateLayout()
 {
     console.log("layout generated");
     itemlist.map((item, index) => {
-        layout(index, item.name, item.price, item.imgDir);
+        layout(index,item.parentid, item.name, item.price, item.imgDir);
     })
 }
 
-function layout(parent, name,price,imgDir)
+function layout(inputid, parentid, name,price,imgDir)
 {
-    var n = document.createElement("div");
-    n.innerHTML = name;
-    n.classList.add("item_text");
-    var element = document.getElementById(parent);
-    parent.appendChild(n);
-
-    /*
+    //container
+    var container = document.createElement("div");
+    container.classList.add("item");
+    //img
     var img = document.createElement("img");
     img.src = imgDir;
     img.classList.add("item_img");
-    img = document.getElementById("item1");
-    img.appendChild(src); */
+    //name
+    var nameitem = document.createElement("div"); //n for 'name'
+    nameitem.innerHTML = name; //
+    nameitem.classList.add("item_text");
+    //price
+    var priceitem = document.createElementById("div");
+    priceitem.innerHTML = price + "$";
+    priceitem.classList.add("item_price");
+    //action
+    var action = document.createElement("div");
+    action.classList.add("action");
+    //btn sell
+    var btnSell = document.createElement("button");
+    btnSell.onclick = `balance_error(); sell_buy('sell', ${price}, ${inputid})`;
+    btnSell.classList.add("sell");
+    btnSell.innerHTML = "Sell";
+    //btn buy
+    var btnBuy = document.createElement("button");
+    btnBuy.onclick = `sell_buy('buy', ${price}, ${inputid})`;
+    btnBuy.classList.add("buy");
+    btnBuy.innerHTML = "Buy";
+    // input
+    var input = document.createElement("input");
+    input.type = "number";
+    input.id = `${inputid}`;
+    input.value = "0";
+    //
 }
 
 /*
