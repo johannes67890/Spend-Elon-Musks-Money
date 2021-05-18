@@ -32,10 +32,20 @@ function balance_error()
     }
 }
 
-
-let itemlist = [{
-    parentid: "containerid",
-    name: "pizza",
+let itemlist = 
+[
+{
+    name: "Coke",
+    price: 3,
+    imgDir: "../img/coke.png",
+},
+{
+    name: "Coffee",
+    price: 5,
+    imgDir: "../img/coffee.png",
+},
+{
+    name: "Pizza",
     price: 10,
     imgDir: "../img/pizza.png",
 }]
@@ -44,54 +54,52 @@ function generateLayout()
 {
     console.log("layout generated");
     itemlist.map((item, index) => {
-        layout(index,item.parentid, item.name, item.price, item.imgDir);
+        layout(index, item.name, item.price, item.imgDir);
     })
 }
 
-function layout(inputid, parentid, name,price,imgDir)
+function layout(inputid, name,price,imgDir)
 {
     //container
     var container = document.createElement("div");
     container.classList.add("item");
+    document.getElementById("containerid").appendChild(container);
     //img
     var img = document.createElement("img");
     img.src = imgDir;
     img.classList.add("item_img");
+    container.appendChild(img);
     //name
     var nameitem = document.createElement("div"); //n for 'name'
     nameitem.innerHTML = name; //
     nameitem.classList.add("item_text");
+    container.appendChild(nameitem);
     //price
-    var priceitem = document.createElementById("div");
+    var priceitem = document.createElement("div");
     priceitem.innerHTML = price + "$";
     priceitem.classList.add("item_price");
+    container.appendChild(priceitem);
     //action
     var action = document.createElement("div");
     action.classList.add("action");
+    container.appendChild(action);
     //btn sell
     var btnSell = document.createElement("button");
-    btnSell.onclick = `balance_error(); sell_buy('sell', ${price}, ${inputid})`;
+    btnSell.addEventListener("click", () => {balance_error(); sell_buy('sell', price, inputid)})
     btnSell.classList.add("sell");
     btnSell.innerHTML = "Sell";
-    //btn buy
-    var btnBuy = document.createElement("button");
-    btnBuy.onclick = `sell_buy('buy', ${price}, ${inputid})`;
-    btnBuy.classList.add("buy");
-    btnBuy.innerHTML = "Buy";
+    action.appendChild(btnSell);
     // input
     var input = document.createElement("input");
     input.type = "number";
-    input.id = `${inputid}`;
+    input.id = `${inputid}`;   
     input.value = "0";
+    action.appendChild(input);
     //
+    //btn buy
+    var btnBuy = document.createElement("button");
+    btnBuy.addEventListener("click", () => sell_buy('buy', price, inputid))
+    btnBuy.classList.add("buy");
+    btnBuy.innerHTML = "Buy";
+    action.appendChild(btnBuy);
 }
-
-/*
-function item_count(input_id)
-{
-    console.log(document.getElementById(input_id).value);
-    let input = document.getElementById(input_id).value;
-    input = Number(input) + 1;
-    document.getElementById(input_id).innerText = input;
-    console.log(input);
-}*/
