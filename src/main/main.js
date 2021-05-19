@@ -10,7 +10,7 @@ function sell_buy(opr, val, input_id)
 {
     //change balance amount
     var x = (opr == 'sell') ? +val : -val; /* conditional */
-    new_amount = Number(amount.replace(/,/g, '')) + x; /*change 'var_amount' to number and plus with paramater*/
+    var new_amount = Number(amount.replace(/,/g, '')) + x; /*change 'var_amount' to number and plus with paramater*/
     amount = new_amount.toLocaleString("ja-JP"); /* add back comma on 'amount' */
     document.getElementById("money").innerHTML =  "$" + amount; /* print to screen */
     //change input amount
@@ -23,20 +23,20 @@ function sell_buy(opr, val, input_id)
 
 function balance_error()
 {
-    if (Number(amount.replace(/,/g, '')) >= 150000000000)
+    if (Number(amount.replace(/,/g, '')) > 150000000000)
     {
         console.log(amount);
-        alert("You are over the balance limit! The page wil reload in a moment!")
+        alert("You are already over the balance limit! The page wil reload in a moment!")
         setTimeout(() => {
             location.reload();
         }, 2000);
-    }
+    } 
 }
 
-function generateLayout()
+function generateLayout(list)
 {
     console.log("layout generated");
-    musk_itemlist.map((item, index) => {
+    list.map((item, index) => {
         layout(index, item.name, item.price, item.imgDir);
     })
 }
@@ -88,3 +88,4 @@ function layout(inputid, name,price,imgDir)
     btnBuy.innerHTML = "Buy";
     action.appendChild(btnBuy);
 }
+generateLayout();
