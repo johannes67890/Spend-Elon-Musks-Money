@@ -33,7 +33,7 @@ function balance_error()
     } 
     if (Number(amount.replace(/,/g, '')) <= 0)
     {
-        alert("Congratulations! You have send all of Elon Musks money!");
+        alert("Congratulations! You have spend all of Elon Musks money!");
     }
 }
 
