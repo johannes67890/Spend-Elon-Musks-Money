@@ -60,8 +60,9 @@ function layout(inputid, name,price,imgDir)
     nameitem.classList.add("item_text");
     container.appendChild(nameitem);
     //price
+    var Display_price = (price).toLocaleString("ja-JP")
     var priceitem = document.createElement("div");
-    priceitem.innerHTML = price + "$";
+    priceitem.innerHTML = Display_price + "$";
     priceitem.classList.add("item_price");
     container.appendChild(priceitem);
     //action
@@ -80,7 +81,6 @@ function layout(inputid, name,price,imgDir)
     input.id = `${inputid}`;   
     input.value = "0";
     action.appendChild(input);
-    //
     //btn buy
     var btnBuy = document.createElement("button");
     btnBuy.addEventListener("click", () => sell_buy('buy', price, inputid))
