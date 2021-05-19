@@ -31,6 +31,10 @@ function balance_error()
             location.reload();
         }, 2000);
     } 
+    if (Number(amount.replace(/,/g, '')) <= 0)
+    {
+        alert("Congratulations! You have send all of Elon Musks money!");
+    }
 }
 
 function generateLayout(list)
@@ -83,7 +87,7 @@ function layout(inputid, name,price,imgDir)
     action.appendChild(input);
     //btn buy
     var btnBuy = document.createElement("button");
-    btnBuy.addEventListener("click", () => sell_buy('buy', price, inputid))
+    btnBuy.addEventListener("click", () => {balance_error(); sell_buy('buy', price, inputid)})
     btnBuy.classList.add("buy");
     btnBuy.innerHTML = "Buy";
     action.appendChild(btnBuy);
