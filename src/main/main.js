@@ -1,4 +1,5 @@
-var amount = (150000000000).toLocaleString("ja-JP"); /*amount balance avaliable. toLocaleString("ja-JP") for the comma*/ 
+
+let amount = (150000000000).toLocaleString("ja-JP"); /*amount balance avaliable. toLocaleString("ja-JP") for the comma*/ 
 
 function balance()
 {
@@ -22,41 +23,29 @@ function sell_buy(opr, val, input_id)
 
 function balance_error()
 {
-    if (Number(amount.replace(/,/g, '')) >= 150000000000)
+    if (Number(amount.replace(/,/g, '')) > 150000000000)
     {
         console.log(amount);
-        alert("You are over the balance limit! The page wil reload in a moment!")
+        alert("You are already over the balance limit! The page wil reload in a moment!")
         setTimeout(() => {
             location.reload();
         }, 2000);
+    } 
+    if (Number(amount.replace(/,/g, '')) <= 0)
+    {
+        alert("Congratulations! You have send all of Elon Musks money!");
     }
 }
 
-let itemlist = 
-[
-{
-    name: "Coke",
-    price: 3,
-    imgDir: "../img/coke.png",
-},
-{
-    name: "Coffee",
-    price: 5,
-    imgDir: "../img/coffee.png",
-},
-{
-    name: "Pizza",
-    price: 10,
-    imgDir: "../img/pizza.png",
-}]
-
-function generateLayout()
+function generateLayout(list)
 {
     console.log("layout generated");
-    itemlist.map((item, index) => {
+    list.map((item, index) => {
         layout(index, item.name, item.price, item.imgDir);
     })
 }
+
+
 
 function layout(inputid, name,price,imgDir)
 {
@@ -75,8 +64,9 @@ function layout(inputid, name,price,imgDir)
     nameitem.classList.add("item_text");
     container.appendChild(nameitem);
     //price
+    var Display_price = (price).toLocaleString("ja-JP")
     var priceitem = document.createElement("div");
-    priceitem.innerHTML = price + "$";
+    priceitem.innerHTML = Display_price + "$";
     priceitem.classList.add("item_price");
     container.appendChild(priceitem);
     //action
@@ -95,13 +85,11 @@ function layout(inputid, name,price,imgDir)
     input.id = `${inputid}`;   
     input.value = "0";
     action.appendChild(input);
-    //
     //btn buy
     var btnBuy = document.createElement("button");
-    btnBuy.addEventListener("click", () => sell_buy('buy', price, inputid))
+    btnBuy.addEventListener("click", () => {balance_error(); sell_buy('buy', price, inputid)})
     btnBuy.classList.add("buy");
     btnBuy.innerHTML = "Buy";
     action.appendChild(btnBuy);
 }
-balance(), 
 generateLayout();

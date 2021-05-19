@@ -1,7 +1,6 @@
 body /*default body setup*/
 {
     background-color:white;
-    height: 100vh;
     width: 100vw;
     margin: 0;
     padding: 0;
@@ -29,15 +28,15 @@ h1 /*Title*/
     align-content: center;
     word-spacing: -1px;
     text-align: center;
-    height: 7.5%;
     position: sticky;
-    top: 0.25rem;
+    top: 0px;
+    padding: 10px;
     background: radial-gradient(farthest-corner at 50%, rgb(0, 253, 0), rgb(17, 204, 33), rgb(27, 146, 37));
 }
 .container /*grid setup*/
 {
     display: grid;
-    background-color: darkgrey;
+    background-color: rgb(156, 156, 156);
     margin: 0;
     grid-template-columns: repeat(3, minmax(0px, 1fr));
     grid-template-rows: repeat(3, minmax(0px, 1fr));
@@ -55,8 +54,8 @@ h1 /*Title*/
 }
 .item_price /*item price*/
 {
-    font-size: 125%;
-    color: rgb(30, 115, 30);
+    font-size: 130%;
+    color: rgb(43, 121, 43);
 }
 .item_img /*img placement*/
 {
