@@ -11,7 +11,7 @@ body /*default body setup*/
     margin-left: auto; /*center img vertivaly*/
     margin-right: auto; /*center img horizontal*/
     border-radius: 50%; /*cirkle around img effect*/
-    /*vv img size vv*/
+    /* img size */
     width: 350px; 
     height: 250px;
 }
@@ -47,7 +47,7 @@ h1 /*Title*/
     border: 2px solid rgb(116, 116, 116); /*grid border for better visual separation*/
     text-align: center; /*text center lignment (mainly used for .item_price + .item_text)*/
 }
-.item_text /*item name/text*/
+.item_text /* item name/text */
 {
     font-family: Verdana;
     font-weight: bold;
