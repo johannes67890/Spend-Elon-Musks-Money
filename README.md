@@ -1,6 +1,9 @@
 # Website
-## Assignment for infomatik April 2021
+## Assignment for infomatik April 2021 
+![](preview.png "Website Preview")
 Made by Emil, Hector og Johannes
+### How to use
+
 
 
 ### Setup
@@ -10,8 +13,8 @@ Made by Emil, Hector og Johannes
 ```
 git clone https://github.com/johannes67890/Hjemmeside.git
 ```
-or download the repository directly from github as a .zip
+###### You can also download the repository directly from github as a .zip
 
-Open then the HTML file in the downloaded directory: ```Hjemmeside/src/ui/```
+- Open then the HTML file in the downloaded directory: ```Hjemmeside/src/ui/```
 
 [Link to Google Docs](https://docs.google.com/document/d/1gDWuoMCSmeoFAbLCFk8Rvg7lYigrCp7-lk3ZK6oRXlU/edit?usp=sharing)
