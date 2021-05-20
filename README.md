@@ -1,10 +1,7 @@
 # Website
 ## Assignment for infomatik April 2021 
-![](preview.png "Website Preview")
+![preview](src/img/preview.png "Website Preview")
 Made by Emil, Hector og Johannes
-### How to use
-
-
 
 ### Setup
 
