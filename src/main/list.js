@@ -151,11 +151,3 @@ let musk_itemlist =
         imgDir: "../img/ball.png",
     },
 ]
-
-    let hector_itemlist = 
-    [
-    {
-        name: "d",
-        price: 3,
-        imgDir: "../img/coke.png",
-    },]
