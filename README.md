@@ -1,4 +1,4 @@
-# Website
+# Spend Elon Musks Money
 ## Assignment for infomatik April 2021 
 ![preview](src/img/preview.png "Website Preview")
 Made by Emil, Hector og Johannes
