@@ -8,7 +8,7 @@ Made by Emil, Hector og Johannes
 - Install [git-bash](https://git-scm.com/downloads)
 - Clone this repository with git-bash with this command:
 ```
-git clone https://github.com/johannes67890/Hjemmeside.git
+git clone https://github.com/johannes67890/Spend-Elon-Musks-Money.git
 ```
 ###### You can also download the repository directly from github as a .zip
 
