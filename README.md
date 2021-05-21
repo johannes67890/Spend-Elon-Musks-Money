@@ -12,6 +12,6 @@ git clone https://github.com/johannes67890/Spend-Elon-Musks-Money.git
 ```
 ###### You can also download the repository directly from github as a .zip
 
-- Open then the HTML file in the downloaded directory: ```../src/ui/```
+- Open then the HTML file in the downloaded directory: ```../src/ui/index.html```
 
 [Link to Google Docs](https://docs.google.com/document/d/1gDWuoMCSmeoFAbLCFk8Rvg7lYigrCp7-lk3ZK6oRXlU/edit?usp=sharing)
