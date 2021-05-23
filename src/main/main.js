@@ -7,7 +7,12 @@
 // * (Med lidt hjælp fra Sebastian Bech)                 *
 // *******************************************************
 
-let amount = (150000000000).toLocaleString("ja-JP"); // amount balance avaliable. toLocaleString("ja-JP") for the comma between large numbers
+var amount = ""; // declare balance amount
+
+function setamount(Amount) //function for set amount for diffrent HTML pages
+{
+    amount = (Amount).toLocaleString("ja-JP"); //add localstring for comma between big numbers
+}
 
 function balance() //display of activ balance amount
 {
@@ -39,7 +44,7 @@ function balance_error() //balance overflow and end-game when balance == 0.
     } 
     if (Number(amount.replace(/,/g, '')) <= 0) //check if balance reached under 0.
     {
-        alert("Congratulations! You have spend all of Elon Musks money!"); //endgame alert
+        alert("Congratulations! You have spend it all!"); //endgame alert
     }
 }
 
